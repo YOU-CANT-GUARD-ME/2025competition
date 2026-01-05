@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #9999995e;
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+
+    &>.header-box {
+        width: 1300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &>.main-logo {
+            display: flex;
+            align-items: center;
+
+            &> a img {
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        &>.nav-A {
+            display: flex;
+            padding-top: 10px;
+
+            &>ul {
+                width: 110px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+
+                &:hover>a {
+                    background-color: pink;
+                    display: block;
+                }
+            }
+
+            &>ul>.drop {
+                height: 0;
+                overflow: hidden;
+                transition: .3s;
+
+                &>li {
+                    width: 110px;
+                    height: 40px;
+                    background-color: #fff;
+
+                    &:hover {
+                        background-color: pink;
+                    }
+                }
+            }
+
+            &:hover>ul>.drop {
+                height: 120px;
+            }
+        }
+
+        &>.nav-B {
+
+            &>ul {
+                display: flex;
+                gap: 20px;
+
+                & > li:hover{
+                    color: pink;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > .footer-box{
+        display: flex;
+        flex-direction: column;
+        width: 1200px;
+
+        & > .sub-text-box{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .footer-text{
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+
+            & > i{
+                display: flex;
+                align-items: center;
+                font-size: 30px;
+                padding: 0 6px 0 10px;
+                transition: .3s;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.fa-twitch:hover{
+    color: rgb(238, 1, 238);
+}
+
+.fa-twitter-square:hover{
+    color: rgb(1, 191, 238);
+}
+
+.fa-vimeo-square:hover{
+    color: rgb(165, 0, 165);
+}
+
+.fa-weixin:hover{
+    color: rgb(238, 222, 1);
+}
+
+.fa-youtube-play:hover{
+    color: rgb(238, 1, 1);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+
+.img-box{
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    gap: 50px;
+
+    & > img{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
+
+.motto-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+    padding-top: 100px;
+    
+    
+    & > div{
+        width: 300px;
+        height: 700px;
+        position: relative;
+
+        
+    }
+}
+
+.name{
+            color: #fff;
+            font-size: 30px;
+            font-weight: 500;
+            padding: 10px;
+        }
+
+
+
+.motto01{
+    background-image: url(../images/motto01.png);
+    background-position: 0;
+}
+
+.motto02{
+    background-image: url(../images/motto02.png);
+    background-position: -300px;
+}
+
+.motto03{
+    background-image: url(../images/motto03.png);
+    background-position: -600px;
+}
+
+
+.motto04{
+    background-image: url(../images/motto04.png);
+    background-position: -900px;
+}
+
+.motto05{
+    background-image: url(../images/motto05.png);
+    background-position: -1200px;
+}
+
+.motto-text{
+
+    & > div{
+        position: absolute;
+        bottom: 40px;
+        font-size: 25px;
+        font-weight: 500;
+        color: #fff;
+        text-shadow: 4px 4px 6px #9b9b9b9c;
+        background-color: pink;
+        height: 100px;
+    }
+}
