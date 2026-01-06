@@ -1,18 +1,33 @@
-const mottos = [...document.querySelectorAll(".motto-box div")]
 const subText = e => document.querySelector(`.motto-text .${e}`)
-const Name = [...document.querySelectorAll(".motto-box .name")]
 
-mottos.forEach(e => {
-    e.addEventListener("mouseenter", () => {
-        mottos.forEach(e2 => e2.style.backgroundImage = `url("./images/${e.className}.png")`)
-        subText(e.className).style.opacity = 1
-        Name.forEach(e2 => { e2.style.display = 'none' })
-        e.querySelector(".name").style.display = 'block'
-    })
+const mottos = $(".motto-box div");
 
-    e.addEventListener("mouseleave", () => {
-        mottos.forEach(e2 => e2.style.backgroundImage = `url("./images/${e2.className}.png")`)
-        subText(e.className).style.opacity = 0
-        Name.forEach(e2 => { e2.style.display = 'block' })
-    })
-})
+mottos.forEach((motto) => {
+    const title = motto.querySelector(".motto-box .name");
+    const index = motto.className.replace(/[^0-9]/g, "");
+    const desc = document.querySelector(`motto${index}`);
+    motto.addEventListener("mouseover", () => {
+        $$(".motto-box .name").forEach(t => {
+            t.style.opacity = 0;
+        });
+
+        mottos.forEach(item => {
+            item.style.backgroundImage = `url(./images/motto/${motto.className})`;
+        });
+
+        if (title) title.style.opacity = 1;
+        if (desc) desc.style.opacity = 1;
+    });
+
+        motto.addEventListener("mouseleave", () => {
+        $$(".motto-box .name").forEach(t => {
+            t.style.opacity = 0;
+        });
+
+        mottos.forEach(item => {
+            item.style.backgroundImage = `url(./images/motto/${item.className})`;
+        });
+
+        if (desc) desc.style.opacity = 0;
+    });
+});
