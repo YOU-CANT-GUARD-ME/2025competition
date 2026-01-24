@@ -1,0 +1,592 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* 로딩 */
+
+.loading{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: load 3s forwards;
+}
+
+.ring{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 15px solid #8f8f8f;
+    border-bottom: 15px solid #a3b18a;
+    z-index: 100;animation: ring 3s forwards;
+}
+
+@keyframes load {
+    0% { background-color: #3838383b; }
+    100% { 
+        opacity: 0; 
+        pointer-events: none;
+    }
+}
+
+@keyframes ring{
+    0%{transform: rotate(0deg);  }
+    100% {transform: rotate(720deg); 
+        opacity: 0;
+    }
+}
+
+/* 헤더 */
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #33333360;
+    z-index: 1;
+    background-color: white;
+}
+
+.nav {
+    width: 1400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo Img {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-A {
+    position: relative;
+    width: 400px;
+}
+
+.nav-A > ul {
+    position: absolute;
+    top: 25px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+}
+
+.nav-A > ul > li {
+    top: -25px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-A > ul > li > a{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    transition: all .2s ease;
+}
+
+.nav-A > ul > li > a:hover {
+    background-color: #344E41;
+    color: white;
+}
+
+.drop {
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.nav-A > ul:hover > li > .drop {
+    height: 100px;
+}
+
+.drop > li {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.drop > li:hover { background-color: #5b8871; }
+
+.drop > li:hover > a { color: white; }
+
+.nav-B {
+    width: 310px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-B > ul {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-B > ul > li {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.nav-B > ul > li:hover {
+    background-color: #344E41;
+    color: white;
+}
+
+.nav-B > ul > li:hover > a { color: white; }
+
+.nav-B > div {
+    color: #777;
+    cursor: pointer;
+}
+
+.nav-B > div:hover {
+    font-weight: bold;
+}
+
+/* 슬라이드 */
+
+.hero-banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    width: 400%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    animation: slide 12s infinite;
+}
+
+.slide:hover {
+    animation-play-state: paused;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg:nth-child(1) {background-image: url(../images/02.jpg);}
+.bg:nth-child(2) {background-image: url(../images/03.jpg);}
+.bg:nth-child(3) {background-image: url(../images/04.jpg);}
+.bg:nth-child(4) {background-image: url(../images/02.jpg);}
+
+.bg > p {
+    position: relative;
+    top: 300px;
+    left: 120px;
+    width: 600px;
+    height: 350px;
+    background-color: rgba(68, 68, 68, 0.705);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.bg > p > span {
+    font-size: 100px;
+    color: #a3b18a;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@keyframes slide {
+    0%,30%{ transform: translateX(0); }
+    35%,60%{ transform: translateX(-25%); }
+    65%,80%{ transform: translateX(-50%); }
+    85%,100%{ transform: translateX(-75%); }
+}
+
+/* 판매상품 */
+
+.product-section {
+    margin-top: 200px;
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-box {
+    width: 1400px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.block {
+    width: 20px;
+    height: 130px;
+    background-color: #344E41;
+}
+
+.tbox {
+    margin-left: 10px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 25px;
+    color: #777;
+}
+
+.etitle {
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #a3b18a;
+}
+
+.product-box {
+    margin-top: 100px;
+    width: 1400px;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ptitles {
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.ptitle {
+    width: 250px;
+    color: #666;
+}
+
+.pbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1400px;
+    height: 900px;
+}
+
+.box {
+    width: 250px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pcard {
+    width: 250px;
+    height: 280px;
+    border: rgb(189, 189, 189) solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pro-img {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 70px;
+}
+
+.pro-img > div {
+    position: absolute;
+    top: 15px;
+    left: 155px;
+    background-color: #344e4173;
+    color: white;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+
+}
+
+.pro-img img {
+    width: 250px;
+    height: 270px;
+    border-bottom-left-radius: 70px;
+}
+
+.pro-desc {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.pro-name {
+    width: 100%;
+}
+
+.pro-price {
+    width: 100%;
+    color: #666;
+}
+
+/* 고지사항 */
+
+.notice-section {
+    margin-top: 200px;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    margin-top: 100px;
+    border-collapse: collapse;
+    width: 1400px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+tr {
+    border-bottom: 1px #444444 solid;
+    cursor: pointer;
+}
+
+tr:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+th {
+    background-color: #344E41;
+    color: white;
+    padding: 20px;
+    cursor: default;
+}
+
+td {
+    padding: 20px;
+    text-align: center;
+}
+
+.notice-section > ul {
+    margin-top: 15px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* 상품입점/제휴문의 섹션 */
+
+.entry-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entry-container {
+    margin-top: 100px;
+    width: 1400px;
+    height: 900px;
+}
+
+.card-box {
+    width: 1400px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-box2 {
+    width: 1400px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card2 {
+    width: 200px;
+    height: 300px;
+    background-color: #e0e0e08a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card2:hover > .card-desc > p {
+    color: #333;
+}
+
+.card-desc {
+    width: 160px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-desc > p {
+    font-size: 15px;
+    color: rgb(185, 185, 185);
+    transition: .2s ease;
+}
+
+.level {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 푸터 */
+
+.footer-section {
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+    background-color: #a3b18a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ftop {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1400px;
+    height: 100px;
+    align-items: center;
+}
+
+.ftop img {
+    width: 100px;
+    height: 100px;
+}
+
+.ftop p {
+    font-size: 20px;
+}
+
+.font {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.font i { 
+    cursor: pointer;
+    color: #636363; 
+    transition: all .3s ease;
+}
+
+.fmiddle {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.fmiddle p {
+    font-size: 18px;
+    display: flex;
+}
+
+.font > i:nth-child(1):hover { color: black; }
+.font > i:nth-child(2):hover { color: rgb(243, 98, 45); }
+.font > i:nth-child(3):hover { color: red; }
+.font > i:nth-child(4):hover { color: skyblue; }
+.font > i:nth-child(5):hover { color: darkblue; }

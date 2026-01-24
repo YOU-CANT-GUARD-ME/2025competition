@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* 헤더 */
+
+.header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px #b8b8b8 solid;
+}
+
+.nav {
+    width: 1400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-A {
+    position: relative;
+    width: 400px;
+    display: flex;
+    z-index: 1;
+}
+
+.nav-A > ul {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-A > ul > li {
+    width: 100px;
+}
+
+.nav-A > ul > li > a {
+    width: 100px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    transition: .2s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-A > ul > li:hover > a {
+    background-color: #344E41;
+    color: white;
+}
+
+.drop {
+    width: 100px;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.nav-A > ul:hover > li > .drop {
+    height: 100px;
+}
+
+.drop > li {
+    width: 100px;
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.drop > li:hover { background-color: #55806a; }
+
+.drop > li:hover > a { color: white; }
+
+.nav-B {
+    width: 330px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-B > ul {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-B > ul > li {
+    width: 100px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-B > ul > li:hover {
+    background-color: #344E41;
+    color: white;
+}
+
+.nav-B > ul > li:hover > a { color: white; }
+
+.nav-B > div {
+    width: 120px;
+    text-align: center;
+    color: grey;
+    cursor: pointer;
+}
+
+.nav-B > div:hover {
+    font-weight: bold;
+}
+
+/* 장바구니 */
+
+.cart-section {
+    margin-top: 200px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-box {
+    width: 1400px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.block {
+    width: 20px;
+    height: 130px;
+    background-color: #344E41;
+}
+
+.tbox {
+    margin-left: 10px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 25px;
+    color: #777;
+}
+
+.etitle {
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #a3b18a;
+}
+
+.pcard {
+    width: 250px;
+    height: 330px;
+    border: rgb(189, 189, 189) solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-con {
+    margin-top: 50px;
+    width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pro-img {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 70px;
+}
+
+.pro-img > div {
+    position: absolute;
+    top: 15px;
+    left: 155px;
+    background-color: #344e4173;
+    color: white;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+
+}
+
+.pro-img img {
+    width: 250px;
+    height: 270px;
+    border-bottom-left-radius: 70px;
+}
+
+.pro-desc {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pro-name {
+    width: 100%;
+}
+
+.pro-price {
+    width: 100%;
+    color: #666;
+}
+
+.pro-qun {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+input {
+    width: 50px;
+    height: 20px;
+}
+
+.pro-fprice {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.tp {
+    color: #666;
+}
+
+.buy-con {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 100px;
+}
+
+.total-price {
+    font-size: 30px;
+    color: #666;
+}
+
+.buy-btn {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #a3b18a;
+    border-radius: 5px;
+    color: #fff;    
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.buy-btn:hover {
+    background-color: #879273;
+}
+
+/* 푸터 */
+
+.footer-section {
+    margin-top: 200px;
+    width: 100%;
+    height: 400px;
+    background-color: #a3b18a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ftop {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1400px;
+    height: 100px;
+    align-items: center;
+}
+
+.ftop img {
+    width: 100px;
+    height: 100px;
+}
+
+.ftop p {
+    font-size: 20px;
+}
+
+.font {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.font i { 
+    cursor: pointer;
+    color: #636363; 
+    transition: all .3s ease;
+}
+
+.fmiddle {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.fmiddle p {
+    font-size: 18px;
+    display: flex;
+}
+
+.font > i:nth-child(1):hover { color: black; }
+.font > i:nth-child(2):hover { color: rgb(243, 98, 45); }
+.font > i:nth-child(3):hover { color: red; }
+.font > i:nth-child(4):hover { color: skyblue; }
+.font > i:nth-child(5):hover { color: darkblue; }

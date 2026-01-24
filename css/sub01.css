@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* 헤더 */
+
+.header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px #b8b8b8 solid;
+}
+
+.nav {
+    width: 1400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-A {
+    position: relative;
+    width: 400px;
+    display: flex;
+    z-index: 1;
+}
+
+.nav-A > ul {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-A > ul > li {
+    width: 100px;
+}
+
+.nav-A > ul > li > a {
+    width: 100px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    transition: .2s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-A > ul > li:hover > a {
+    background-color: #344E41;
+    color: white;
+}
+
+.drop {
+    width: 100px;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.nav-A > ul:hover > li > .drop {
+    height: 100px;
+}
+
+.drop > li {
+    width: 100px;
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.drop > li:hover { background-color: #55806a; }
+
+.drop > li:hover > a { color: white; }
+
+.nav-B {
+    width: 330px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-B > ul {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-B > ul > li {
+    width: 100px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-B > ul > li:hover {
+    background-color: #344E41;
+    color: white;
+}
+
+.nav-B > ul > li:hover > a { color: white; }
+
+.nav-B > div {
+    width: 120px;
+    text-align: center;
+    color: grey;
+    cursor: pointer;
+}
+
+.nav-B > div:hover {
+    font-weight: bold;
+}
+
+/* 전체상품 */
+
+.intro-section {
+    margin-top: 200px;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-box {
+    width: 1400px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img-box {
+    position: relative;
+    width: 600px;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-box img {
+    width: 1000px;
+    height: 700px;
+}
+
+.img-box div {
+    position: absolute;
+    top: 120px;
+    left: -100px;
+    transform: rotate(90deg);
+    font-size: 160px;
+    width: 400px;
+    color: #a3b18a;
+}
+
+.text-box {
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-box {
+    width: 500px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.block {
+    width: 20px;
+    height: 130px;
+    background-color: #344E41;
+}
+
+.tbox {
+    margin-left: 10px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 25px;
+    color: #777;
+}
+
+.etitle {
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #a3b18a;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    margin-bottom: 60px;
+}
+
+.texts p {
+    color: #aaa;
+}
+
+.title-box2 {
+    width: 1400px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 모토 */
+
+.motto-section {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.motto-container {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+.motto-container > div {
+    width: 250px;
+    height: 700px;
+    border: 1px solid black;
+    transition: .3s ease;
+    position: relative;
+}
+
+.motto01 {
+    background: url(../images/motto01.png);
+    background-position: 0;
+}
+
+.motto02 {
+    background: url(../images/motto02.png);
+    background-position: -250px;
+}
+
+.motto03 {
+    background: url(../images/motto03.png);
+    background-position: -500px;
+}
+
+.motto04 {
+    background: url(../images/motto04.png);
+    background-position: -750px;
+}
+
+.motto05 {
+    background: url(../images/motto05.png);
+    background-position: -1000px;
+}
+
+.motto-title {
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    background-color: white;
+    border: 5px solid #a3b18a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: default;
+    transition: 0.3s;
+}
+
+.dess > li {
+    cursor: default;
+    position: absolute;
+    top: 0;
+    background-color: #a3b18a;
+    margin: 10px;
+    font-weight: bold;
+    text-align: justify;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.3s;
+    color: white;
+}
+
+
+
+/* 푸터 */
+
+.footer-section {
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+    background-color: #a3b18a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ftop {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1400px;
+    height: 100px;
+    align-items: center;
+}
+
+.ftop img {
+    width: 100px;
+    height: 100px;
+}
+
+.ftop p {
+    font-size: 20px;
+}
+
+.font {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.font i { 
+    cursor: pointer;
+    color: #636363; 
+    transition: all .3s ease;
+}
+
+.fmiddle {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.fmiddle p {
+    font-size: 18px;
+    display: flex;
+}
+
+.font > i:nth-child(1):hover { color: black; }
+.font > i:nth-child(2):hover { color: rgb(243, 98, 45); }
+.font > i:nth-child(3):hover { color: red; }
+.font > i:nth-child(4):hover { color: skyblue; }
+.font > i:nth-child(5):hover { color: darkblue; }
